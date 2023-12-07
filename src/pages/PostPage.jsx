@@ -15,7 +15,7 @@ const dummy_header = {
   date: "06 Dec 2023"
 }
 
-function BlogPage() {
+function PostPage() {
   return (
     <div className="blogpage">
       <Navbar />
@@ -37,7 +37,8 @@ function BlogPage() {
           <ContentCard element={<ProfileCard />} />
           <ContentCard element={<Summary />} />
         </Container>
-          {/* Recommanded Posts */}
+
+        {/* TODO: Add Recommanded posts */}
       </div>
 
       <Footer />
@@ -45,4 +46,4 @@ function BlogPage() {
   )
 }
 
-export default BlogPage
+export default PostPage
