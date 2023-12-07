@@ -13,7 +13,7 @@ import SocialLinks from '../components/SocialLinks'
 const dummy = {
   category: "House",
   title: "How to buy a house?",
-  date: "04 Nov 2023"
+  date: "04 Dec 2023"
 }
 const categories = [
   "House",
@@ -28,7 +28,7 @@ function HomePage() {
   return (
     <div className="homepage">
       <Navbar />
-      
+
       <div className="main-content">
         <div className="featured-posts">
           <Container rows={0} columns={2}>

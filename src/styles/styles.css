@@ -8,6 +8,7 @@
   text-decoration: none;
   font-family: "Poppins", "Barlow", serif;
   font-size: 10px;
+  list-style: none;
 }
 
 html {
@@ -49,6 +50,97 @@ body {
 }
 .blogpage .main-content {
   margin: 0 10%;
+  margin-top: 10rem;
+}
+.blogpage .main-content .header {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+}
+.blogpage .main-content .header img {
+  height: 25rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(0);
+  border-radius: 4px;
+}
+.blogpage .main-content .header img:hover {
+  filter: grayscale(1);
+}
+.blogpage .main-content .header .title,
+.blogpage .main-content .header .by-date,
+.blogpage .main-content .header a {
+  color: #EEEEEE;
+  font-size: 1.3rem;
+}
+.blogpage .main-content .header .category {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 4px;
+}
+.blogpage .main-content .header .title {
+  font-size: 2.4rem;
+}
+.blogpage .main-content .post-data {
+  margin-top: 1.5rem;
+  gap: 12px;
+}
+.blogpage .main-content .post-data .content-card {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  position: sticky;
+  top: 10rem;
+}
+.blogpage .main-content .post-data .toc {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+.blogpage .main-content .post-data .toc .title {
+  color: #EEEEEE;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.blogpage .main-content .post-data .toc .contents ul {
+  padding: 6px;
+}
+.blogpage .main-content .post-data .toc .contents ul li {
+  display: flex;
+  font-weight: 500;
+  font-size: 1.7rem;
+  margin-top: 0.5rem;
+}
+.blogpage .main-content .post-data .toc .contents ul li a {
+  color: #EEEEEE;
+}
+.blogpage .main-content .post-data .toc .contents ul li a ul li {
+  margin-top: 0px;
+}
+.blogpage .main-content .post-data .toc .contents ul li a:hover {
+  color: coral;
+}
+.blogpage .main-content .post-data .toc .contents ul li .heading {
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+.blogpage .main-content .post-data .toc .contents ul li .subheading {
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-left: 3rem;
+}
+.blogpage .main-content .post-data .main-post {
+  grid-column: span 2;
+  color: rgba(238, 238, 238, 0.8);
+  font-size: 1.7rem;
 }
 
 .navbar {
@@ -97,7 +189,9 @@ body {
   cursor: pointer;
   border-radius: 3px;
 }
-.feature-blog-card .title, .feature-blog-card .by-date, .feature-blog-card a {
+.feature-blog-card .title,
+.feature-blog-card .by-date,
+.feature-blog-card a {
   color: #EEEEEE;
   font-size: 1.3rem;
 }
@@ -133,7 +227,9 @@ body {
   cursor: pointer;
   border-radius: 3px;
 }
-.post-card .title, .post-card .by-date, .post-card a {
+.post-card .title,
+.post-card .by-date,
+.post-card a {
   color: #EEEEEE;
   font-size: 1.4rem;
 }
@@ -267,6 +363,52 @@ body {
   stroke: coral;
 }
 
+.post-summary {
+  align-items: flex-start;
+}
+.post-summary .profile-card {
+  display: flex;
+  gap: 10px;
+}
+.post-summary .profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.post-summary .profile-card .info {
+  display: flex;
+  flex-direction: column;
+  color: #EEEEEE;
+}
+.post-summary .profile-card .info .name {
+  font-size: 2rem;
+}
+.post-summary .profile-card .info .bio {
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+.post-summary .profile-card .info .social-links {
+  margin-top: 10px;
+}
+.post-summary .summary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #EEEEEE;
+}
+.post-summary .summary .title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.post-summary .summary .info {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
 .footer {
   display: flex;
   font-size: 4rem;
@@ -294,7 +436,9 @@ body {
   font-size: 1.7rem;
   text-decoration: underline;
 }
-.footer .footer-posts, .footer .footer-categories, .footer .footer-social-links {
+.footer .footer-posts,
+.footer .footer-categories,
+.footer .footer-social-links {
   display: flex;
   flex-direction: column;
 }
